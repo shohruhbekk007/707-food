@@ -25,12 +25,19 @@ taomlar = InlineKeyboardBuilder()
 
 for tugnma in Taomlar():
     taomlar.button(text=f"{tugnma[1]}", callback_data=f"{tugnma[1]}")
-taomlar.add(InlineKeyboardButton(text=f"maxsulot qoshish", callback_data='qoshish'))
-taomlar.adjust(2)
+# taomlar.add(InlineKeyboardButton(text=f"maxsulot qoshish", callback_data='qoshish'))
+taomlar.adjust(3)
 
 ichimliklar = InlineKeyboardBuilder()
 
 for tugnma in Ichimliklar():
     ichimliklar.button(text=f"{tugnma[1]}", callback_data=f"{tugnma[1]}")
-ichimliklar.add(InlineKeyboardButton(text=f"maxsulot qoshish", callback_data='qoshish'))
-ichimliklar.adjust(2)
+# ichimliklar.add(InlineKeyboardButton(text=f"maxsulot qoshish", callback_data='qoshish'))
+ichimliklar.adjust(3)
+
+
+buyurtma_sonlar = InlineKeyboardBuilder()
+
+for i in range(1, 10):
+    buyurtma_sonlar.button(text=f"{i}", callback_data=f"{i}")
+buyurtma_sonlar.adjust(3)
