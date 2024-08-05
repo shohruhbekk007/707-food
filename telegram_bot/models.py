@@ -41,3 +41,17 @@ class ComandStart(models.Model):
 
     class Meta:
         verbose_name = 'Asosiy sahifa'
+
+class Users(models.Model):
+    title = models.CharField(verbose_name="Toliq ism: ", max_length=60)
+    phone_number = models.CharField(verbose_name="Telfon nomr: ", max_length=20)
+    telegram_id = models.CharField(max_length=20, verbose_name="telegram id: ")
+    username = models.CharField(max_length=18, verbose_name="telegram username: ")
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Foydalanuvchi'
+        verbose_name_plural = verbose_name + 'lar'
